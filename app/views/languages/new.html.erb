@@ -1,0 +1,5 @@
+<p class="pageheading"><%=t("headings.new.heading", :model=>t("entities.language") )%></p>
+
+<%= render 'form' %>
+<%= link_to t('headings.new.heading', :model=> t('entities.language')), new_language_path %> |
+<%= link_to t("action.back"), languages_path %>

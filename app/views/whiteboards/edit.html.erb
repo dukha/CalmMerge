@@ -1,0 +1,6 @@
+<p class="pageheading"><%=t("headings.editing.heading", :model=>t("entities.whiteboard") )%></p>
+
+<%= render 'form' %>
+
+<%= link_to t('headings.new.heading', :model=> t('entities.whiteboard')), new_whiteboard_path %> |
+<%= link_to t("action.back"), whiteboards_path %>

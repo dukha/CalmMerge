@@ -1,0 +1,178 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  commons:
+    noo: No
+    yess: Yes
+  helpers: 
+    submit:
+      create: "Create a %{model}"
+      update: "Confirm changes to %{model}"
+         
+    labels:
+      student:
+        first_name: First Namex
+        last_name: Last Namex
+        dob: Date of Birth
+        
+  #student:
+    #first_name:
+    #  label: First Name
+    #last_name:
+    #  label: Last Name
+    #dob:
+    #  label: Date of Birth
+    #action:
+      #new_student:
+        #label: Create New student
+    #label: Student
+  action:
+    show: Show
+    edit: Edit
+    destroy: Delete
+    new: New
+    back: Back
+    create_model: Add %{model}
+    
+    new_model: New %{model}
+  messages:
+    delete:
+      are_you_sure: Deleting %{model}. Are you sure?
+      success: The %{model} was successfully deleted.
+    create:
+      success: The %{model} was successfully created.
+    update:
+      success: The %{model} was successfully updated. 
+  activerecord:
+    #sign_up: Sign up
+    sign_in: Sign in
+    sign_out: SignOut
+  links:
+    no_unlock_instructions: Didn't receive unlocing instructions?
+    no_confirmation_instructions: Didn't receive confirmation instructions?
+    forgotten_password: Forgot your password?
+    cancel_registration: Cancel account
+    unhappy: Unhappy?
+  headings:
+    new:
+      heading: New %{model}
+      user: Register New User
+    edit:
+      heading: Editing %{model}
+      user: Edit User   
+    listing:
+      heading: Listing %{model}        
+    application_subheading: Developers Discussion Prototype 
+    whiteboards: Home; Whiteboard    
+  entities:
+    course_type: Course Type
+    course_types: Course Types
+    course: Course
+    courses: Courses
+    location: Location
+    locations: Locations
+    quota: Quota
+    quotas: Quotas
+    quota_schema: Quota Schema
+    quota_schemas: Quota Schemas
+    whiteboard_type: Whiteboard Type
+    whiteboard_types: Whiteboard Types
+    language: Language
+    languages: Languages
+    user: User
+    users: Users 
+    whiteboard_type: Whiteboard Type
+    whiteboard_types: Whiteboard Types 
+    whiteboard: Whiteboard
+    whiteboards: Whiteboards
+  menus:
+    courses: Courses
+    current_courses_list: Current Courses List
+    current_course: Current Course
+    add_course: Add Course
+    lookups:  Lookups
+    course_types: Course Types
+    languages: Languages
+    whiteboard_types: Whiteboard Types
+    locations: Locations
+    quotas: Quotas
+    quota_schemas: Quota Schemas
+    user_info: User Information
+    home: Home
+    contact: Contact Calm
+    help: Help
+    about: About Calm
+    user_preferences: User Preferences(Change Password)
+    admin: Admin
+    new_user: New User
+    change_password: Change Password      
+  lookups:
+    course_type:
+      10day: 10 Day Course
+      1day: 1 Day Course
+      3day: 3 Day Course
+      sati8day: Satipatthana Sutta Course (8 Day)
+      sati9day: Satipatthana Sutta Course (9 Day)
+      childteen1day: Children and Teenagers 1 Day Course
+      teenagers1day: Teenagers 1`Day
+      children1Day: Childrens 1 Day
+      children2day: Childrens 2 Day
+      exec: Executive 10 Day course
+      work: Work Period
+      openday: Open Day
+      other: Other
+      20day: 20 Day Course
+      30day: 30 Day Course
+      45day: 45 Day Course
+      60day: 60 Day Course
+      tsc15day: Teachers Self Course 15 Day 
+    whiteboard_type:
+      system: System
+      localadmin: Local Admin
+      user: User 
+  formtastic:
+    labels:
+      name: Name
+      description: Description
+      translation_code: Translation Code
+      iso_code: ISO Language Code
+      old_code: Old Code
+      oldcode: Old Code
+      email: Email
+      password: Password
+      begin_date: Begin Date
+      end_date: End Date
+      old_students_only: Old Students Only
+      quota:
+        name: Name 
+        quota: Quota
+        initial_quota: Initial Quota
+        days_from_start_init_to_real: Days from Course to Use Real Quota
+      user: 
+        language: Choose the language that will be used for using the calm screens
+      course:
+        course_type_id: Course Type
+        location_id: Location
+    hints:
+      password: Enter password here
+      confirm_password: Enter password again
+      email: Enter valid email address where user can be contacted
+      username: Enter name that the user will use to sign letters (usually not just initials).
+      begin_date: First day of the course
+      end_date: Last day of the course
+      old_students_only: (Click on if no new students may attend the course e.g. Sati) 
+      quota:
+        name: Name of quota here, eg New Males, Males etc
+        quota: Number of students in this quota  
+        initial_quota: Allow for cancellation by using an inital quota
+        days_from_start_init_to_real: Start using the real quota, not the initial quota, say, 7 days before the course
+      user:
+        passwordedit: Leave blank if the password is to remain unchanged  
+      courses:
+        course_type_id: Choose the course type from list
+        location_id: Choose the location from the list
+    actions:
+      sign_in: Sign in
+      save: Save %{model}
+      update: Update %{model}  

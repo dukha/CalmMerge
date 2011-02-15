@@ -1,0 +1,20 @@
+%h3= "Choose action on: #{@location.to_s}"
+-# %p Parent Id: #{@location.parent_id}, Id: #{@location.id}
+
+<!-- stylesheet_link_tag 'appstylesheet' ml: not in header removed(alsnot no style sheet by this name-->
+
+%h5 Modify this node
+%ul
+  %li= button_to "Edit #{@location.to_s}", edit_location_path(@location), :method => :get
+  %li= button_to "Delete #{@location.to_s}", location_path(@location), :method => :delete, :confirm => "Are you sure?", :title => "Confirm"
+
+%h5 add a child (if it is not a venue)
+%ul
+  %li= button_to "Add an Area", new_child_area_path(@location), :method => :get
+  %li= button_to "Add a Venue", new_child_venue_path(@location), :method => :get
+  %li= button_to "Add an Organisation",new_child_organisation_path(@location), :method => :get
+
+<p>
+<a href="/locations"> Back </a>
+-# %h5 params #{params}
+

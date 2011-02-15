@@ -1,0 +1,35 @@
+<p class="pageheading"><%=t("headings.listing.heading", :model=>t("entities.languages") )%></p>
+
+<%= will_paginate %>
+<table class="data">
+  <tr class="dataheader">
+    <th class ="dataheader"><%=t($FL+"iso_code")%></th>
+    <th class ="dataheader"><%=t($FL+"name")%></th>
+    
+    <th class="linkheader"></th>
+    <th class="linkheader"></th>
+  <% row_class="" %>
+<% row_counter =0 %>  
+<% cell_class = "data" %>
+<% link_cell_class="link"%></tr>
+  
+<% @languages.each do |language| %>
+<% if row_counter%2==0: %>
+  <%  row_class="dataeven" %>
+<% else %>
+  <% row_class ="dataodd"  %>
+<% end %>
+  <tr class = "<%= row_class %>" >
+    <td class="<%= cell_class %>"><%= language.iso_code %></td>
+    <td class="<%= cell_class %>"><%= language.name %></td>
+    
+    <td "<%= link_cell_class %>"><%= link_to t('action.edit'), edit_language_path(language) %></td>
+    <td "<%= link_cell_class %>"><%= link_to t('action.destroy'), language, :confirm => t('messages.delete.are_you_sure', :model => t('entities.language')), :method => :delete %></td>
+  </tr>
+<% row_counter += 1 %>  	
+<% end %>
+</table>
+<%= will_paginate %>
+<br />
+
+<%= link_to t('headings.new.heading', :model=> t('entities.language')), new_language_path %>

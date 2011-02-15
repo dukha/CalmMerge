@@ -1,0 +1,38 @@
+<p class="pageheading"><%%=t("headings.listing.heading", :model=>t("entities.<%=plural_table_name%>") )%></p>
+
+<%%= will_paginate %>
+<table class="data">
+  <tr class="dataheader">
+<% for attribute in attributes %>
+    <th class ="dataheader"><%%=t($FL+'<%=attribute.name%>') %></th>
+<% end %>
+    <th class="linkheader"></th>
+    <th class="linkheader"></th>
+    
+  </tr>
+<%% row_class="" %>
+<%% row_counter =0 %>  
+<%% cell_class = "data" %>
+<%% link_cell_class="link"%>  
+<%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+<%% if row_counter%2==0: %>
+  <%%  row_class="dataeven" %>
+<%% else %>
+  <%% row_class ="dataodd"  %>
+<%% end %>
+  <tr class = "<%%= row_class %>" >
+<% for attribute in attributes %>
+    <td class="<%%= cell_class %>"><%%= <%= singular_table_name%>.<%=attribute.name %> %></td>
+		 
+<% end %>
+    
+    <td class="<%%= link_cell_class %>"><%%= link_to  t('action.edit'), edit_<%=singular_table_name%>_path(<%= singular_table_name %>) %></td>
+    <td class="<%%= link_cell_class %>"><%%= link_to t('action.destroy'),  <%=singular_table_name %> , :confirm => t('messages.delete.are_you_sure', :model => t("entities.<%=singular_table_name%>")), :method => :delete %></td>
+  </tr>
+<%% row_counter += 1 %>  	
+<%% end %>
+</table>
+<%%= will_paginate %>
+
+<br />
+<%%= link_to t('headings.new.heading', :model=> t('entities.<%=singular_table_name%>')), new_<%=singular_table_name%>_path %>

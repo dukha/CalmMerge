@@ -1,0 +1,26 @@
+Language.delete_all
+Language.create!(:iso_code=> "en", :name=>"English")
+Language.create!(:iso_code=> "nl", :name=>"Nederlands")
+log.info("Language data inserted successfully.")
+
+WhiteboardType.delete_all
+WhiteboardType.create!(:name=>"system", :translation_code=>"system")
+WhiteboardType.create!(:name=>"local admin", :translation_code=>"localadmin")
+WhiteboardType.create!(:name=>"user", :translation_code=>"user")
+log.info("Whiteboard Type data inserted successfully.")
+
+Whiteboard.delete_all
+Whiteboard.create!(:whiteboard_type_id=> WhiteboardType.find_by_name("system").id, :info=>"New version of Calm will be online tomorrow." )
+Whiteboard.create!(:whiteboard_type_id=> WhiteboardType.find_by_name("local admin").id, :info=>"Female quota exceeded for 2 Dec. No more confirmations.")
+Whiteboard.create!(:whiteboard_type_id=> WhiteboardType.find_by_name("user").id, :info=>"Need a new printer cartridge in office. Who can order it?")
+
+
+# The roles for authorization
+Role.delete_all
+Role.create! :name => :world_config, :description => "Can change everything in all locations"
+Role.create! :name => :superuser, :description => "Can change everything in his/her authorized organisation"
+Role.create! :name => :admin, :description => "Can add a venue in his/her authorized organisation"
+Role.create! :name => :registrar, :description => "Can access only what is necessary to process an application"
+
+User.delete_all
+User.create!(:email=> "mark@gmail.com", :password=>"xxxxxx",:username=>"mark", :language_id=>Language.find_by_iso_code("en").id, :password_confirmation=>"xxxxxx")

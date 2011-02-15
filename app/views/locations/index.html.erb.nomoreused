@@ -1,0 +1,6 @@
+%h3= "You are viewing #{@data_file_path}"
+
+<h2><%= controller.action_name %></h2>
+<%= stylesheet_link_tag 'appstylesheet'%>
+<ul id="my_tree" class="filetree">
+<%= display_segment(@root_node) %>

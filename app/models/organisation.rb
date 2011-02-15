@@ -1,0 +1,2 @@
+class Organisation <  Area
+end

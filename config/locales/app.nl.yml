@@ -1,0 +1,165 @@
+nl:
+  helpers: 
+    submit:
+      create: "Creëren %{model}"
+      update: "Bevestig veranderingen aan %{model}"
+      sign_in: Inloggen  
+  action:
+    show: Laten zien
+    edit: Verwerken
+    destroy: Verwijderen
+    new: Nieuw
+    back: Terug           
+    create_model: Toevoegen %{model}
+    #listing_models: Lijst van %{model} 
+    #editing_model: Verwerken %{model}
+    #new_model: Nieuwe %{model}  
+    user: Gebruiker
+    student: Student
+    user:
+      language:
+        label: Taal
+  messages:
+    delete:
+      are_you_sure: Verwijder %{model}. Weet u zeker?
+      success: De %{model} verwijderd.
+    create:
+      success: De %{model} gecreëren.
+    update:
+      success: De %{model} verwerkte. 
+  activerecord:
+    #sign_up: Sign up
+    sign_in: Inloggen
+    sign_out: Uitloggen
+    #quota: qota
+  links:
+    no_unlock_instructions: Hebt u geen unlock instructies?
+    no_confirmation_instructions: Hebt u geen confirmatie instructies gekregen?
+    forgotten_password: Wachtwoord vergeeten?
+    cancel_registration: Account annuleeren
+    unhappy: Onblij?
+  headings:
+    new:
+      heading: Nieuwe %{model}
+      user: Nieuww Gebruiker toevoegen
+    edit:
+      heading: Verwerken %{model}
+      user: Verwerken Gebruiker
+    listing:
+      heading: Listje %{model}   
+    application_subheading: Ontwikkelaars discussie prototype
+    whiteboards: Startpagina; whiteboard
+  entities:
+    course_type: Soort cursus
+    course_types: Soorten cursus
+    course: Cursus
+    courses: Cursussen
+    location: Locatie
+    locations: Locaties
+    quota:  Evenredig deel
+    quotas: Evenredig delen
+    quota_schema: Evenredig deel Schema
+    quota_schemas: Evenredig deel Schemas
+    whiteboard_type: Soort whiteboard
+    whiteboard_types: Soorten whiteboard
+    language: Taal
+    languages: Talen
+    whiteboard: Whiteboard
+    whiteboards: Whiteboards
+    user: Gebruiker
+    users: Gebruikers
+  menus:
+    courses: Cursussen
+    current_courses_list: Huidige cursusen lijst
+    current_course: Huidige Cursus
+    add_course: Cursus toevoegen
+    lookups:  Lookups
+    course_types: Soorten Cursussen
+    languages: Talen
+    whiteboard_types: Soorten Whiteboards 
+    locations: Locaties
+    quotas: Evenredig delen
+    quota_schemas: Evenredig deel schemas
+    user_info: Gebruiker informatie
+    home: Startpagina
+    contact: Contact Calm
+    help: Hulp
+    about: Over Calm
+    user_preferences: Gebruiker voorkeuren (Wachtword)
+    admin: Admin
+    new_user: Neiuwe gebruiker
+    change_password: Wachtword veranderen
+      
+  lookups:
+    course_type:
+      10day: 10 Dagse cursus
+      1day: 1 Dagse cursus
+      3day: 3 Dagse cursus
+      sati8day: Satipatthana Sutta Cursus (8 daggen)
+      sati9day: Satipatthana Sutta Cursus (9 daggen)
+      childteen1day: Kinderen and teeners 1 dagse Cursus
+      teenagers1day: Teeners 1`dagse
+      children1Day: Kinderen 1 dagse
+      children2day: Kinderen 2 dagse
+      exex: Executive 10 dagse cursus
+      work: Werk Periode
+      openday: Open Dag
+      other: Andere
+      20day: 20 Dagse Cursus
+      30day: 30 Dagse Cursus
+      45day: 45 Dagse Cursus
+      60day: 60 Dagse Cursus
+      tsc15day: Teachers Self Cursus 15 Daggen  
+    whiteboard_type:
+      system: Systeem
+      localadmin: Locale Administratie
+      user: Gebruiker
+  formtastic:
+    labels:
+      name: Naam
+      description: Omschrijving
+      translation_code: Vertaal code
+      iso_code: ISO taal code
+      old_code: Oude code
+      oldcode: Oude code
+      email: Email
+      password: Wachtword
+      begin_date: Begin datum
+      end_date: Eind datum
+      old_students_only: Alleen oude studenten
+      quota:
+        name: Naam
+        quota: Evenredig deel
+        initial_quota: Eerste evenredig deel
+        days_from_start_init_to_real: Daggen van cursus te gebruiken echte quota
+      course:
+        course_type_id: Soort Cursus
+        location_id: Locatie     
+      first_name: Eerste naam
+      last_name: Laatse naam
+      dob: Geboortedatum  
+    hints:
+      password: Wachtword hier toevoegen
+      confirm_password: Nog een keer het zelfde wachtword
+      email: Een geldige email adres toevoegen
+      username: Een naam die kan gebruikt worden voor aantekenen van emailtjes 
+      begin_date: Het begin van de cursus
+      end_date: Het eind van de cursus
+      old_students_only: (Klik als er geen nieuwe student mag de cursus deelnamen)
+      quota:
+        name: Naam van evenredig deel here bvd Nieuwe mannen, Vrouwen
+        quota: Aantal studenten in evenredig deel 
+        initial_quota: Voorkomen annuleeringen door een groter evenredig deel in het begin
+        days_from_start_init_to_real: Begin te gebruiken de echte quota, niet de eerste evenredig deel, bvd, 7 daggen voor de cursus
+      user:
+        passwordedit: Laat leeg als geen wachtwoord verandering 
+      courses:
+        course_type_id: Kies de soort cursus vanuit het lijtje
+        location_id: Kies de locatie vanuit de lijst
+    actions:
+      sign_in: Inloggen
+      create: Wegschrijven #nieuwe %{model}
+      update: Wegschrijven #%{model}
+  commons:
+    noo: Nee
+    yess: Ja     

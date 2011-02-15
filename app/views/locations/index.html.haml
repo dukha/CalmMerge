@@ -1,0 +1,7 @@
+<!-- stylesheet_link_tag 'appstylesheet'ml: not in header removed(alsnot no style sheet by this name -->
+%h3= "You are viewing #{@data_file_path}"
+
+-#%h2= "#{controller.action_name}"
+
+%ul#my_tree.filetree
+  = display_segment(@root_node)

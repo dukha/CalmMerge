@@ -1,0 +1,42 @@
+<header>
+	<table id="headerlayout" ><tr>
+	<td class="logo" >
+	   <!-- %= link_to logo, root_path, :class => 'logo' %  -->
+		<%= logo %>
+	</td>
+	<td   colspan=2 >
+		   <div class="heading">
+			 <%= titler %>
+			 <div> 
+			 <div class="subheading">
+			 	    <%=t("headings.application_subheading") %>
+			 	</div>
+	</td>
+	 
+	 </tr>
+	 <tr>
+	 	  
+			<td class="applanguagetd" colspan=3  >
+           <!-- a href="/application_languages/73">change language</a  -->
+      <% if user_signed_in? %>  
+      <!--button_to "Sign out b2", { :action=>"destroy", :controller=>"devise/sessions"} , :html => { :method => :delete}%  -->    
+
+			<form method="get" action="/users/sign_out"  class="button_to_fake" id='signout'>
+				<div><input type="submit" value=<%=t($AR+"sign_out")%> id="signoutbutton"/>
+				<input name="authenticity_token" type="hidden" value="w6vNLpWrzKTDWsn5XgKbt/HNQE89f3N1jezG8CdTo40=" />
+				</div>
+			</form>		 
+      <!-- % else %  -->  
+        <!-- %= link_to "Sign up", new_user_registration_path %  -->  
+        <!--%= link_to "Sign in", new_user_session_path %  -->  
+      <% end %>  
+    <!-- /div  -->  
+		
+			 <% @languages=Language.all %>
+       <%=collection_select :language, :iso_code, @languages, :iso_code, :name, {:selected=>I18n.locale, :disabled=>"disabled"} %>
+			 <!--a id="firelanguagechange" href="/application_languages/en" ></  -->
+   
+	 </div>
+	 </tr>
+	 </table>
+</header>

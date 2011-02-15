@@ -1,0 +1,33 @@
+<p class="pageheading"><%=t("headings.whiteboards")%></p>
+
+<%= will_paginate %>
+<table class="whiteboard">
+  <!-- tr class="dataheader">
+    <th class ="dataheadercell">Info</th>
+    <th class="linkheadercell"></th>
+    <th class="linkheadercell"></th>
+    
+  </tr  -->
+
+  
+
+  
+<% @whiteboards.each do |whiteboard| %>
+
+  
+
+  <tr class = "whiteboard">
+    <td class="whiteboardname"><%= t($LU+"whiteboard_type." +WhiteboardType.find(whiteboard.whiteboard_type_id).translation_code) %></td>
+		<td class="whiteboard"><%= whiteboard.info %></td>
+		 
+    
+    <td class="whiteboardlink"><%= link_to t('action.edit'), edit_whiteboard_path(whiteboard) %></td>
+    
+  </tr>
+  	
+<% end %>
+</table>
+<%= will_paginate %>
+<br />
+
+

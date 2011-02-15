@@ -1,0 +1,35 @@
+<p class="pageheading"><%=t("headings.listing.heading", :model=>t("entities.whiteboard_types") )%></p>
+
+<%= will_paginate %>
+<table class="data">
+  <tr class="dataheader">
+    <th class ="dataheader"><%=t($FL+"name")%></th>
+    <th class ="dataheader"><%=t($FL+"translation_code")%></th>
+    <th class="linkheader"></th>
+    <th class="linkheader"></th>
+    
+  </tr>
+<% row_class="" %>
+<% row_counter =0 %>  
+<% cell_class = "data" %>
+<% link_cell_class="link"%>    
+<% @whiteboard_types.each do |whiteboard_type| %>
+<% if row_counter%2==0: %>
+  <%  row_class="dataeven" %>
+<% else %>
+  <% row_class ="dataodd"  %>
+<% end %>
+  <tr class = "<%= row_class %>">
+    <td class="<%= cell_class %>" ><%= whiteboard_type.name %></td>
+    <td class="<%= cell_class %>" ><%= whiteboard_type.translation_code %></td>
+    
+    <td class="link_cell_class"><%= link_to t('action.edit'), edit_whiteboard_type_path(whiteboard_type) %></td>
+    <td class="link_cell_class"><%= link_to t('action.destroy'), whiteboard_type, :confirm => t('messages.delete.are_you_sure', :model => t('entities.whiteboard_type')), :method => :delete %></td>
+  </tr>
+<% row_counter += 1 %>  	
+<% end %>
+</table>
+<%= will_paginate %>
+<br />
+
+<%= link_to t('headings.new.heading', :model=> t('entities.whiteboard_type')), new_whiteboard_type_path %>

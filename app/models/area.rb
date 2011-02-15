@@ -1,0 +1,2 @@
+class Area <  Location
+end

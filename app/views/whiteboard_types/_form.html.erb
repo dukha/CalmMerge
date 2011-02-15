@@ -1,0 +1,11 @@
+
+<%= semantic_form_for @whiteboard_type do |f| %>  
+  <%= f.error_messages %> 
+	<% f.inputs do %>
+	  <%= f.input :name %>
+	  <%= f.input :translation_code %>
+	<% end %>
+  <%= f.buttons do %>
+      <%= f.commit_button  %>    
+  <% end %>
+<% end %>
